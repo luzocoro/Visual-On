@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #f8fafc;
+    --surface-card: #ffffff;
+    --surface-muted: #f1f5f9;
+    --surface-border: #e2e8f0;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --accent-blue: #0284c7;
+    --accent-emerald: #10b981;
+    --accent-amber: #f59e0b;
+    --accent-rose: #f43f5e;
+  }
+}
+
+/* Light Soft Neumorphic Utilities */
+.neu-light-flat {
+  background: #ffffff;
+  box-shadow: 6px 6px 16px #e2e8f0, -6px -6px 16px #ffffff;
+}
+
+.neu-light-card {
+  background: #ffffff;
+  box-shadow: 8px 8px 20px #e2e8f0, -8px -8px 20px #ffffff;
+  border: 1px solid #f1f5f9;
+}
+
+.neu-light-pressed {
+  background: #f8fafc;
+  box-shadow: inset 3px 3px 6px #e2e8f0, inset -3px -3px 6px #ffffff;
+}
+
+.neu-light-btn {
+  background: #ffffff;
+  box-shadow: 4px 4px 10px #e2e8f0, -4px -4px 10px #ffffff;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.neu-light-btn:hover {
+  box-shadow: 2px 2px 6px #e2e8f0, -2px -2px 6px #ffffff;
+  transform: translateY(-1px);
+}
+
+.neu-light-btn:active {
+  box-shadow: inset 2px 2px 5px #e2e8f0, inset -2px -2px 5px #ffffff;
+  transform: translateY(0);
+}
+
+.neu-light-btn-primary {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  box-shadow: 4px 4px 12px rgba(2, 132, 199, 0.25);
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.neu-light-btn-primary:hover {
+  box-shadow: 2px 2px 8px rgba(2, 132, 199, 0.35);
+  transform: translateY(-1px);
+}
+
+.neu-light-btn-emerald {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  box-shadow: 4px 4px 12px rgba(16, 185, 129, 0.25);
+  color: #ffffff;
+}
+
+/* Subtle scanlines for tactical view */
+.bg-subtle-grid {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(226, 232, 240, 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(226, 232, 240, 0.5) 1px, transparent 1px);
+}
+
+/* Animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s infinite ease-in-out;
+}
+

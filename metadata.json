@@ -1,0 +1,6 @@
+{
+  "name": "Visual-On | Vigilante Silencioso & Enclave Forense",
+  "description": "Sistema de seguridad forense y centinela con captura silenciosa de webcam, almacenamiento cifrado AES-256 y backend exclusivo Supabase.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
